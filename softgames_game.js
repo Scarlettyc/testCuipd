@@ -16917,7 +16917,7 @@ var DNStateManager = (function() {
 			chip_goal: C7N8y.W8U,
 			chip_goal_count: C7N8y.T8U,
 			goal: C7N8y.a82,
-			score_goal_count: G5,
+			score_goal_count: 11000,
 			bombProb: C7N8y.W8U,
 			bombCounter: C7N8y.J12
 		};
@@ -17364,7 +17364,7 @@ var DNStateManager = (function() {
 			"chip_goal": C7N8y.W8U,
 			"chip_goal_count": C7N8y.W12,
 			"goal": C7N8y.a82,
-			"score_goal_count": R5,
+			"score_goal_count": 3000,
 			"bombProb": C7N8y.W8U,
 			"bombCounter": C7N8y.J12
 		};
@@ -17428,7 +17428,7 @@ var DNStateManager = (function() {
 			chip_goal: C7N8y.W8U,
 			chip_goal_count: C7N8y.T8U,
 			goal: C7N8y.a82,
-			score_goal_count: W5,
+			score_goal_count: 28000,
 			bombProb: C7N8y.W8U,
 			bombCounter: C7N8y.J12
 		};
@@ -17460,7 +17460,7 @@ var DNStateManager = (function() {
 			chip_goal: C7N8y.W8U,
 			chip_goal_count: C7N8y.T8U,
 			goal: C7N8y.a82,
-			score_goal_count: O5,
+			score_goal_count: 12000,
 			bombProb: C7N8y.W8U,
 			bombCounter: C7N8y.J12
 		};
@@ -17679,7 +17679,7 @@ var DNStateManager = (function() {
 			chip_goal: C7N8y.W8U,
 			chip_goal_count: C7N8y.T8U,
 			goal: C7N8y.d32,
-			score_goal_count: C7N8y.W8U,
+			score_goal_count: 6000,
 			bombProb: C7N8y.W8U,
 			bombCounter: C7N8y.J12
 		};
@@ -17807,7 +17807,7 @@ var DNStateManager = (function() {
 			"chip_goal": C7N8y.W8U,
 			"chip_goal_count": C7N8y.G12,
 			"goal": C7N8y.a82,
-			"score_goal_count": h5,
+			"score_goal_count": 3500,
 			"bombProb": C7N8y.W8U,
 			"bombCounter": C7N8y.J12
 		};
@@ -18021,6 +18021,39 @@ var DNStateManager = (function() {
 			"bombProb": C7N8y.W8U,
 			"bombCounter": C7N8y.J12
 		};
+			K5.LOT_OF_BOMBS = {
+		"form": [
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+			[0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+		],
+		"dirt": null,
+		"chips": [
+			[0, 3, 2, 3, 2, 4, 2, 2, 3, 0],
+			[0, 3, 5, 2, 6, 6, 3, 5, 5, 0],
+			[0, 6, 5, 4, 5, 3, 6, 3, 4, 0],
+			[0, 2, 1, 2, 2, 1, 5, 1, 2, 0],
+			[0, 2, 1, 3, 1, 2, 5, 3, 1, 0],
+			[0, -1,13, -1, 14, -1,13, -1,13, 0],
+			[0, 11, -1, 14, -1,12, -1, 11, -1, 0],
+			[0, -1, 11, -1, 11, -1, 15, -1, 11, 0]
+		],
+		"chip_types": 4,
+		"moves": 0,
+		"time": 25,
+		"chip_goal": 0,
+		"chip_goal_count":13,
+		"goal": "GOAL_SCORE",
+		"score_goal_count": 5000,
+		"bombProb": 0,
+		"bombCounter": 10
+	};
+
 		K5.MID_LEVEL = {
 			form: [
 				[C7N8y.W8U, C7N8y.T8U, C7N8y.T8U, C7N8y.T8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U],
@@ -18693,7 +18726,7 @@ K5.NEW_15 = {
 "chip_goal": 0,
 "chip_goal_count": 1,
 "goal": "GOAL_SCORE",
-"score_goal_count": 13500,
+"score_goal_count": 10000,
 "bombProb": 0.1,
 "bombCounter": 10
 };
@@ -19172,7 +19205,7 @@ K5.NEW_28 = {
 "chip_goal": 0,
 "chip_goal_count": 1,
 "goal": "GOAL_SCORE",
-"score_goal_count": 15000,
+"score_goal_count": 9000,
 "bombProb": 0,
 "bombCounter": 10
 };
@@ -24235,7 +24268,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.j6U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": 15000,
+		"score_goal_count": 11000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -24650,7 +24683,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.q6U,
 		"chip_goal_count": M5Y8y.i6U,
 		"goal": M5Y8y.k7U,
-		"score_goal_count": M5Y8y.s6U,
+		"score_goal_count": 3000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -24682,7 +24715,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.i6U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.Z6U,
+		"score_goal_count":3000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -24746,7 +24779,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.j6U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.F7U,
+		"score_goal_count": 28000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -24778,7 +24811,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.j6U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.I6U,
+		"score_goal_count": 12000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -24997,7 +25030,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.b7U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.w6U,
+		"score_goal_count":6000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -25125,7 +25158,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.b7U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.W7U,
+		"score_goal_count": 3500,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -25335,7 +25368,7 @@ var LEVEL_1 = {
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.m7U,
 		"goal": "GOAL_SCORE",
-		"score_goal_count": M5Y8y.p7U,
+		"score_goal_count":5000,
 		"bombProb": M5Y8y.s6U,
 		"bombCounter": M5Y8y.T7U
 	},
@@ -26010,7 +26043,7 @@ NEW_15 = {
 "chip_goal": 0,
 "chip_goal_count": 1,
 "goal": "GOAL_SCORE",
-"score_goal_count": 13500,
+"score_goal_count": 10000,
 "bombProb": 0.1,
 "bombCounter": 10
 },
@@ -26489,7 +26522,7 @@ NEW_28 = {
 "chip_goal": 0,
 "chip_goal_count": 1,
 "goal": "GOAL_SCORE",
-"score_goal_count": 15000,
+"score_goal_count": 9000,
 "bombProb": 0,
 "bombCounter": 10
 },
