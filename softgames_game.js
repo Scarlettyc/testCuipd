@@ -13199,7 +13199,7 @@ var DNStateManager = (function() {
 			var O7 = "map_6";
 			var O8 = "map_7";
 
-			M3.ALL_JPG = [M3.MAIN_MENU_BACK, M3.FILL_BOTTOM, M3.FILL_TOP, O8,O7,O6,O5, h5, b5, m5];
+			M3.ALL_JPG = [M3.MAIN_MENU_BACK, M3.FILL_BOTTOM, M3.FILL_TOP,O5, h5, b5, m5, O8,O7,O6,];
 		};
 		var I3 = function(m5) {
 			M3.ARROW_BONUS_VERT = m5;
@@ -15585,7 +15585,6 @@ var DNStateManager = (function() {
 				if (k6S46[K46]['localStorage'].getItem(this.STARS_PER_LEVEL)) {
 					this.starsPerLevel = JSON.parse(k6S46[K46]['localStorage'].getItem(this.STARS_PER_LEVEL));
 				}
-				console.log(this.starsPerLevel);
 				if (k6S46[K46]['localStorage'].getItem(this.BOOSTERS_COUNT)) {
 					this.boostersCount = JSON.parse(k6S46[K46]['localStorage'].getItem(this.BOOSTERS_COUNT));
 				}
@@ -15621,6 +15620,7 @@ var DNStateManager = (function() {
 			return Levels.levels[m5];
 		};
 		h3.prototype.getTotalLevels = function() {
+			console.log(Levels.levels.length);
 			return Levels.levels.length;
 		};
 		h3.prototype.getStarsInLevel = function(m5) {
@@ -22519,19 +22519,22 @@ t5();
 			this.yAcc = C7N8y.b82;
 			this.calcSpeedCache = C7N8y.W8U;
 			this.slidePositions = new Array();
+			//84,6215,
 			this.levelsPositions = [C7N8y.L62, m2, C7N8y.A82, B0, C7N8y.k52, T3, a5, i3, t0, i0, M3, u0, F0, Y0, E0, B5, C7N8y.z52, w3, H3, I3, X3, d0, C7N8y.u52, O0, C7N8y.z62, M0, C7N8y.w62, k0, K0, N0, n0, W3, G3, b0, J3, x3, S3, l3, c3, z3, S3, e5, L3, A3, H3, l5, C7N8y.E5m, p3, C7N8y.M02, U5, C7N8y.x82, D5, C7N8y.v62, Y5, Z5, s5, j5, V5, f5, y5, A5, o5, L5, k5, v5, p5, H0, U0, I0, P0, V0, w0, q0, T0, D0, z0, C7N8y.R82, v0, C7N8y.O62, N3, m3, R0, C7N8y.k5m, E3, C7N8y.i5m, g0, q3, C7N8y.N52, e3, Q3, Z3, r3, j3, f3, n3, h3, d3, u5, Q5, C7N8y.U8U, F3, J5, C7N8y.i32, g3, C7N8y.v62, P5, C7N8y.T82, K5, t5, S5, G5, C7N8y.U7U, R5, W5, t0, C7N8y.d5m, O5, C7N8y.w8U, h5, C7N8y.o62];
+			console.log(this.levelsPositions);
 			this.addChild(this.layer);
 			for (var o0 = C7N8y.W8U; C7N8y.Y0p(o0, 7); o0++) {
 				var A2 = function() {
 					L2.y = C7N8y.P0p(C7N8y.h3m, o0);
+					console.log(L2.y);
 				};
-				console.log(b5 + (o0 + C7N8y.T8U));
+			
 				var L2 = DNAssetsManager.g_instance.getImage(b5 + (o0 + C7N8y.T8U));
 				this.layer.addChild(L2);
 				A2();
 			}
-			this.mapH = C7N8y.t0p(C7N8y.h3m, C7N8y.S8U);
-			this.layer.y = -C7N8y.b82;
+			this.mapH =900*7;
+			this.layer.y = -3000;
 			if (m5 == -C7N8y.T8U) {
 				var k2 = function() {
 					m5 = C7N8y.B0p(GameData.getInstance().levelsAvailable(), C7N8y.T8U);
@@ -22539,7 +22542,8 @@ t5();
 				k2();
 			}
 			this.loadLayout(CurLayouts.SELECT_LEVEL_LAYOUT, this);
-			for (var o0 = C7N8y.W8U; C7N8y.U0p(o0, this.levelsPositions.length / C7N8y.A8U); o0++) {
+			console.log(this.levelsPositions.length);
+			for (var o0 = C7N8y.W8U; C7N8y.U0p(o0, 97); o0++) {
 				var X0 = new SelectLevelButton(Images.LEVEL_BUTTON, o0);
 				this.addGuiObject(X0);
 				this.layer.addChild(X0);
@@ -22549,6 +22553,7 @@ t5();
 					X0.shine();
 					this.layer.y = +Constants.ASSETS_HEIGHT / C7N8y.A8U - X0.y;
 				}
+				console.log('number '+o0+' x '+X0.x+' y '+X0.y);
 			}
 			this.checkConstrains();
 			this.findGUIObject(Layouts.NAME_STARS).setText(GameData.getInstance().totalStars().toString());
