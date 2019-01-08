@@ -13674,7 +13674,7 @@ var DNStateManager = (function() {
 				type: Layouts.TYPE_STATIC_PICTURE,
 				picture: Images.MAIN_MENU_BACK,
 				x: C7N8y.I94(Constants.ASSETS_WIDTH, 2),
-				y: C7N8y.i94(Constants.ASSETS_HEIGHT, 2)
+				y: C7N8y.i94(Constants.ASSETS_HEIGHT,1)
 			}, {
 				type: Layouts.TYPE_STATIC_PICTURE,
 				picture: Images.MAIN_MENU_RAINBOW,
@@ -13691,7 +13691,7 @@ var DNStateManager = (function() {
 				type: Layouts.TYPE_SKEW,
 				picture: Images.MAIN_MENU_HILLS,
 				x: C7N8y.v14(Constants.ASSETS_WIDTH, 2),
-				y: C7N8y.k14(Constants.ASSETS_HEIGHT, 336 / 2),
+				y: C7N8y.k14(Constants.ASSETS_HEIGHT,1 ),
 				name: "hills"
 			}, {
 				type: Layouts.TYPE_STATIC_PICTURE,
@@ -15567,8 +15567,9 @@ var DNStateManager = (function() {
 		};
 		h3.prototype.save = function() {
 			try {
-				k6S46[K46]['localStorage'].setItem(this.LEVELS_COMPLETED, this.levelsCompleted.toString());
+				k6S46[K46]['localStorage'].setItem(this.LEVELS_COMPLETED, 97);
 				k6S46[K46]['localStorage'].setItem(this.TOTAL_SCORE, this.totalScore.toString());
+				this.starsPerLevel=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 				k6S46[K46]['localStorage'].setItem(this.STARS_PER_LEVEL, JSON.stringify(this.starsPerLevel));
 				k6S46[K46]['localStorage'].setItem(this.BOOSTERS_COUNT, JSON.stringify(this.boostersCount));
 				k6S46[K46]['localStorage'].setItem(this.GOLD, this.gold.toString());
@@ -15576,15 +15577,19 @@ var DNStateManager = (function() {
 		};
 		h3.prototype.load = function() {
 			try {
-				this.levelsCompleted = +k6S46[K46]['localStorage'].getItem(this.LEVELS_COMPLETED) || 0;
+				this.levelsCompleted=97;
+				// this.levelsCompleted = +k6S46[K46]['localStorage'].getItem(this.LEVELS_COMPLETED) || 0;
 				this.totalScore = +k6S46[K46]['localStorage'].getItem(this.TOTAL_SCORE) || 0;
-				for (var b5 = 0; C7N8y.P2w(b5, this.getTotalLevels()); b5++) {
-					this.starsPerLevel.push(0);
-				}
-
-				if (k6S46[K46]['localStorage'].getItem(this.STARS_PER_LEVEL)) {
-					this.starsPerLevel = JSON.parse(k6S46[K46]['localStorage'].getItem(this.STARS_PER_LEVEL));
-				}
+				this.starsPerLevel=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+				
+				// for (var b5 = 0; C7N8y.P2w(b5, this.getTotalLevels()); b5++) {
+				// 	this.starsPerLevel.push(1);
+				// }
+				// console.log(this.starsPerLevel);
+				// if (k6S46[K46]['localStorage'].getItem(this.STARS_PER_LEVEL)) {
+				// 	this.starsPerLevel = this.starsPerLevel;
+					
+				// }
 				if (k6S46[K46]['localStorage'].getItem(this.BOOSTERS_COUNT)) {
 					this.boostersCount = JSON.parse(k6S46[K46]['localStorage'].getItem(this.BOOSTERS_COUNT));
 				}
@@ -17359,10 +17364,10 @@ var DNStateManager = (function() {
 				[C7N8y.W8U, C7N8y.W8U, C7N8y.A8U, C7N8y.L8U, C7N8y.A8U, C7N8y.L8U, C7N8y.A8U, C7N8y.A8U, C7N8y.W8U, C7N8y.W8U]
 			],
 			"chip_types": C7N8y.S8U,
-			"moves": C7N8y.J12,
+			"moves": 18,
 			"time": C7N8y.W8U,
 			"chip_goal": C7N8y.W8U,
-			"chip_goal_count": C7N8y.W12,
+			"chip_goal_count": 4500,
 			"goal": C7N8y.a82,
 			"score_goal_count": 3000,
 			"bombProb": C7N8y.W8U,
@@ -17802,7 +17807,7 @@ var DNStateManager = (function() {
 				[C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U, C7N8y.W8U]
 			],
 			"chip_types": C7N8y.S8U,
-			"moves": C7N8y.G12,
+			"moves": 20,
 			"time": C7N8y.W8U,
 			"chip_goal": C7N8y.W8U,
 			"chip_goal_count": C7N8y.G12,
@@ -22520,7 +22525,7 @@ t5();
 			this.calcSpeedCache = C7N8y.W8U;
 			this.slidePositions = new Array();
 			//84,6215,
-			this.levelsPositions = [ 84 , 6215,106 , 6094,220 , 6014,375 , 6035,535 , 6041,639 , 5939,652 , 5808,623 , 5673,522 , 5588,377 , 5618,247 , 5684,112 , 5623,71 , 5489,70 , 5329,109 , 5209,214 , 5119,362 , 5181,531 , 5161,603 , 5049,634 , 4911,603 , 4783,509 , 4687,377 , 4714,243 , 4741,133 , 4684,97 , 4574,82 , 4414,117 , 4296,223 , 4214,366 , 4237,514 , 4259,625 , 4183,649 , 4064,632 , 3946,564 , 3836,439 , 3809,334 , 3875,196 , 3909,98 , 3825,85 , 3682,122 , 3524,230 , 3476,351 , 3481,472 , 3508,589 , 3486,636 , 3390,630 , 3287,567 , 3191,442 , 3176,332 , 3212,218 , 3236,120 , 3187,82 , 3092,104 , 3001,178 , 2926,304 , 2902,417 , 2928,535 , 2933,602 , 2860,576 , 2769];
+			this.levelsPositions =[ 84 , 6215,106 , 6094,220 , 6014,375 , 6035,535 , 6041,639 , 5939,652 , 5808,623 , 5673,522 , 5588,377 , 5618,247 , 5684,112 , 5623,71 , 5489,70 , 5329,109 , 5209,214 , 5119,362 , 5181,531 , 5161,603 , 5049,634 , 4911,603 , 4783,509 , 4687,377 , 4714,243 , 4741,133 , 4684,97 , 4574,82 , 4414,117 , 4296,223 , 4214,366 , 4237,514 , 4259,625 , 4183,649 , 4064,632 , 3946,564 , 3836,439 , 3809,334 , 3875,196 , 3909,98 , 3825,85 , 3682,122 , 3524,230 , 3476,351 , 3481,472 , 3508,589 , 3486,636 , 3390,630 , 3287,567 , 3191,442 , 3176,332 , 3212,218 , 3236,120 , 3187,82 , 3092,104 , 3001,178 , 2926,304 , 2902,417 , 2928,535 , 2933,602 , 2860,576 , 2769,626,2615,604,2494,490,2414,335,2435,175,2441,71,2339,58,2208,87,2073,188,1988,333,2018,463,2084,598,2023,639,1889,640,1729,601,1609,496,1519,348,1581,179,1561,107,1449,76,1311,107,1183,201,1087,333,1114,467,1141,577,1084,613,974,628,814,593,696,487,614,344,637,196,659,85,583,61,464,78,346,146,236,271,209,376,275];
 			console.log(this.levelsPositions);
 			this.addChild(this.layer);
 			for (var o0 = C7N8y.W8U; C7N8y.Y0p(o0, 7); o0++) {
@@ -24715,7 +24720,7 @@ var LEVEL_1 = {
 			[M5Y8y.s6U, M5Y8y.s6U, M5Y8y.q6U, M5Y8y.D6U, M5Y8y.q6U, M5Y8y.D6U, M5Y8y.q6U, M5Y8y.q6U, M5Y8y.s6U, M5Y8y.s6U]
 		],
 		"chip_types": M5Y8y.P6U,
-		"moves": M5Y8y.T7U,
+		"moves": 18,
 		"time": M5Y8y.s6U,
 		"chip_goal": M5Y8y.s6U,
 		"chip_goal_count": M5Y8y.i6U,
